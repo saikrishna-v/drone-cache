@@ -44,6 +44,8 @@ steps:
     commands:
       - pwd
       - ls -al 
+      - ls -al vendor
+      - ls -al -R tmp
       
   - name: test
     image: golang:1.14.4-alpine3.12
