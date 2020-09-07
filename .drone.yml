@@ -39,7 +39,12 @@ steps:
       - make lint
     environment:
       CGO_ENABLED: 0
-
+  - name: verif
+    image: busybox
+    commands:
+      - pwd
+      - ls -al 
+      
   - name: test
     image: golang:1.14.4-alpine3.12
     commands:
